@@ -6,16 +6,6 @@
     "r": "node index.js"
   },
   "dependencies": {
-    "discord.js": "^11.5.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sunbot977/valorant.git"
-  },
-  "bugs": {
-    "url": "https://github.com/sunbot977/valorant/issues"
-  },
-  "homepage": "https://github.com/sunbot977/valorant#readme",
-  "description": ""
+    "discord.js": "^12.4.1"
+  }
 }
