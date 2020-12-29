@@ -14,7 +14,7 @@ SERVER MEMBERS INTENT 활성화를 필요로 합니다.
 
 const Discord = require("discord.js")
 const intent_list = new Discord.Intents(["GUILD_MEMBERS", "GUILD_MESSAGES", "GUILDS", "GUILD_INVITES"])
-const client = new Discord.Client()
+const client = new Discord.Client({ ws: { intents: intent_list } })
 const token = process.env.token
 const welcomeChannelName = "안녕하세요" // 입장 시 환영메시지를 전송 할 채널의 이름을 입력하세요.
 const byeChannelName = "안녕히가세요" // 퇴장 시 메시지를 전송 할 채널의 이름을 입력하세요.
@@ -24,7 +24,7 @@ const roleName = "게스트" // 입장 시 지급 할 역할의 이름을 적어
 
 client.on("ready", () => {
   console.log("켰다.")
-  client.user.setActivity('YOUTUBE', { type: 'STREAMING', url: 'https://www.youtube.com/'});
+  client.user.setPresence({ activity: { name: "?명령어를 입력해보세요." }, status: "online"})
 })
 
 client.on("guildMemberAdd", (member) => {
